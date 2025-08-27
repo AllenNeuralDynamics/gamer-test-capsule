@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 set -ex
 
+set +x   # make sure to never print tokens
+export AWS_SESSION_TOKEN="$API_SECRET"
+export AWS_BEARER_TOKEN_BEDROCK="$API_SECRET_2"
+set -x
+
+export CLAUDE_CODE_USE_BEDROCK=1
+
 # This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
 python -u run_capsule.py "$@"

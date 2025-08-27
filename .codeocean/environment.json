@@ -1,8 +1,30 @@
 {
 	"version": 1,
-	"base_image": "codeocean/jupyterlab:3.6.1-miniconda4.12.0-python3.9-ubuntu20.04",
+	"base_image": "codeocean/py-r:python3.12.4-R4.3.3-JupyterLab4.2.4-RStudiorstudio-server-2024.04.2-764-ubuntu22.04",
 	"options": {
 		"registry_host_arg": true,
-		"git_ask_pass": true
+		"git_ask_pass": true,
+		"mount_secrets": true
+	},
+	"installers": {
+		"apt": {
+			"packages": [
+				{
+					"name": "build-essential",
+					"version": "12.9ubuntu3"
+				}
+			],
+			"install_software_properties_common": true
+		},
+		"pip3": {
+			"packages": [
+				{
+					"name": "git+https://github.com/AllenNeuralDynamics/gamer-x.git#egg=gamer-x",
+					"version": "d61648ccdbf3d0db9ebcb6a7b91ffdf7707cce81"
+				}
+			],
+			"options": {},
+			"pre_install_options": {}
+		}
 	}
 }

@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"parameters": [
+		{
+			"id": "iZ7WQzwdpLP3wAw4",
+			"name": "prompt",
+			"param_name": "prompt",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "for mouse 721291 please make a table of sessions, date, and session_type",
+			"required": true
+		},
+		{
+			"id": "7ZSR1ORO0Miemz92",
+			"name": "expected_results",
+			"param_name": "expected_results",
+			"help_text": "Text that should be included in the output from GAMER. If formatted as a list (do not include quotation marks), each value will be tested against the output. ",
+			"type": "text",
+			"value_type": "string"
+		}
+	]
+}
